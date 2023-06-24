@@ -21,11 +21,13 @@ public class DataInmobiliariaServiceImpl implements IDataInmobiliarioService {
 
 
     @Override
+    @Transactional
     public DataInmobiliaria save(DataInmobiliaria dataInmobiliaria) throws Exception {
         return dataInmobiliariaRepository.save(dataInmobiliaria);
     }
 
     @Override
+    @Transactional
     public void delete(Long id) throws Exception {
         dataInmobiliariaRepository.deleteById(id);
     }

@@ -33,4 +33,14 @@ public class EntidadFinanciera {
     @Column(name = "seguro_inmueble", nullable = false)
     private Float segInmueble;
 
+    public EntidadFinanciera(String nombreEntidad, String tipoTasa, String tipoTasaNominal, String tipoCapitalizacion, Float valorTasa, Integer plazo, Float segDesgravamen, Float segInmueble) {
+        this.nombreEntidad = nombreEntidad;
+        this.tipoTasa = tipoTasa;
+        this.tipoTasaNominal = tipoTasaNominal;
+        this.tipoCapitalizacion = tipoCapitalizacion;
+        this.valorTasa = valorTasa;
+        this.plazo = plazo;
+        this.segDesgravamen = segDesgravamen;
+        this.segInmueble = segInmueble;
+    }
 }
