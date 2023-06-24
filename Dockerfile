@@ -5,7 +5,7 @@ RUN mvn -f /home/app/pom.xml clean package
 
 FROM openjdk:17-jdk-alpine
 EXPOSE 8080
-COPY --from=build /home/app/target/Inmocredit-1.0.jar /usr/local/lib/app.jar
+COPY --from=build /home/app/target/InmoCredit-1.0.jar /usr/local/lib/app.jar
 COPY start.sh start.sh
 RUN chmod +x start.sh
 ENTRYPOINT ["./start.sh"]
